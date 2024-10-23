@@ -3,8 +3,21 @@
 {% block title %}INDEX|{% endblock title %}
 {% block body  %}
 
-<form action="/" method="post">
+      
+  <form class="row g-3" action="/" method='post'>
+    {% csrf_token %} 
     
-</form>
+    <input type="name" name="name" id="name" placeholder="name"><br>
+    <input type="password" name="password" id="password" placeholder="password">
+    <br>
+    
+    
+   
+    
+    <button type="submit" class="btn btn-primary">Sign in</button>
+   
+  </form>
+    
 
-{% endblock body  %}this is index page
+
+{% endblock body  %}
